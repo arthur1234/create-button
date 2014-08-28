@@ -1,21 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Create Button (CSS & HTML)</title>
+    <meta charset="UTF-8">
+    <title>Create Button (CSS & HTML)</title>
 
-	<!-- adding jquery, jquery UI -->
-	<script type="text/javascript" src="javascript/jquery/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="javascript/jqueryUI/jquery-ui.min.js"></script>
+    <!-- adding jquery, jquery UI -->
+    <script type="text/javascript" src="javascript/jquery/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="javascript/jqueryUI/jquery-ui.min.js"></script>
 
-	<!-- adding css of jquery UI -->
-	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <!-- adding css of jquery UI -->
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
-	<div id="wrapper" class="wrapper">
-		
-	</div>	
-	<!-- adding  main.js -->
-	<script type="text/javascript" src="javascript/main.js"></script>
+    <div id="global_wrapper" class="global_wrapper">
+        <div id="wrapper" class="wrapper">
+            <div id="dialog" title="Pick Color">
+                <p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
+                    <span class="ui-icon ui-icon-pencil" style="float:left; margin:-2px 5px 0 0;"></span>
+                    Simple Colorpicker
+                </p>
+
+                <div id="red"></div>
+                <div id="green"></div>
+                <div id="blue"></div>
+
+                <div id="swatch" class="ui-widget-content ui-corner-all"></div>
+
+                <div id="color_number" class="color_number">
+                    <span>
+						#
+						</span>
+                    <input type="text" id="put_color" value="">
+                    <button onclick="changeColorByClick('#'+$('#put_color').val());">change</button>
+                </div>
+            </div>
+
+            <div id="header" class="header">
+                <h1>
+					CSS 	BUTTON GENERATOR
+				</h1>
+            </div>
+            <div id="top_section" class="top_section">
+                <div id="top_section_left" class="top_section_left">
+                    <div id="top_section_left_body" class="top_section_left_body">
+						 <p>
+                            <span>Background Color:</span>
+                            <button id="bg_color" class="bg_color change_color_btn" >set</button>
+                        </p>
+                         <p>
+                            <span>Border Color:</span>
+                            <button id="border_color" class="border_color  change_color_btn" >set</button>
+                        </p>
+                        <p>
+                            <label for="amount">Border size:</label>
+                            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                        </p>
+                        <div id="slider-range-max"></div>
+
+
+
+
+
+                    </div>
+                </div>
+                <div id="top_section_right" class="top_section_right">
+                    <button id="myByDefault"></button>
+                </div>
+            </div>
+            <div id="bottom_section" class="bottom_section">
+                <textarea id="text_css" class="text_css"></textarea>
+                <textarea id="text_html" class="text_html"></textarea>
+                <div class="clear"></div>
+            </div>
+            <div id="footer" class="footer">
+                <input type="text" id="email" class="email" placeholder="email">
+                <br>
+                <button id="submit" class="submit" value="Submit"></button>
+            </div>
+        </div>
+    </div>
+    <!-- adding  main.js -->
+    <script type="text/javascript" src="javascript/main.js"></script>
 </body>
+
 </html>

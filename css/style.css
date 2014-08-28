@@ -1,0 +1,193 @@
+.global_wrapper{
+	width: 100%;
+	height: 100%;
+	font-family: Arial, serif, sans-serif;
+	font-size: 16px;
+}
+
+div{
+	width: 100%;
+}
+
+.wrapper{
+	margin: 0 auto;
+	width: 1000px;
+	height: 100%;
+}
+
+.header{
+	text-align: center;
+	height: 100px;
+}
+
+.header h1{
+	font-size: 24px;
+	font-weight: bold;	
+}
+
+.top_section{
+	height: 400px;
+}
+
+.top_section_left{
+	width: 50%;
+	float: left;
+}
+.top_section_left_body{
+	margin: 0 auto;
+	width: 50%;
+	border: 1px solid #abc;
+}
+
+.top_section_right{
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+.top_section_right button{
+	width: 166px;
+	height: 40px;
+	background-color: green;
+	border: 1px solid blue;
+}
+
+.bottom_section{
+	margin: 0 auto;
+	width: 612px;
+	text-align: center;
+}
+
+.bottom_section textarea{
+	width: 300px;
+	float: left;
+}
+
+.footer{
+	margin: 0 auto;
+	width: 200px;
+}
+.submit{
+	width: 200px;
+	height: 40px;
+}
+
+/* button setting color */
+.change_color_btn{
+	width: 70px;
+	height: 20px;
+
+}
+
+/* //////////   jquery UI  ////////// */
+
+#ui-id-1{
+	padding-left: 91px;
+}
+.ui-dialog-titlebar .ui-button{
+	top: -1px;
+	left: 83px;
+}
+
+.ui-dialog-titlebar{
+	width: 99%!important;
+}
+.ui-dialog-titlebar-close{
+	background-image: none!important;	
+	width: 18px!important;
+	height: 18px!important;
+}
+
+/* color picker */
+#dialog{
+	margin-top: 10px;
+	border-radius: 10px;
+	background-color: #000;
+	height: 160px!important;
+}
+#dialog p{
+	background-image: none!important;
+	color: #fff;
+
+}
+
+
+#red, #green, #blue{
+	margin: 14px;
+}
+.ui-dialog{
+	border:none;
+	outline: none;
+}
+
+
+#dialog  .ui-widget-content{
+	width: 170px;
+}
+
+#red .ui-widget-header{
+	background-color: #ef2929!important;
+}
+#green .ui-widget-header{
+	background-color: #8ae234!important;
+}
+#blue .ui-widget-header{
+	background-color: #729fcf!important;
+}
+
+#swatch{
+	width: 80px!important;
+	height: 76px!important;
+	position: relative;
+	top: -89px;
+	left: 204px;
+	border: none!important;
+}
+
+.color_number{
+	width: 100%;
+	position: relative;
+	top: -78px;
+	font-size: 12px;
+	color: #fff;
+	text-align: center;
+}
+.color_number input{
+	width: 100px;
+	height: 15px;
+	border-radius: 10px;
+	outline: none;
+	border: 2px solid #ccc;
+	padding-left: 10px;
+	font-size: 10px;
+	color: #000;
+}
+
+
+.color_number button{
+	margin-left: 10px;
+	position: relative;
+	top: 1px;
+	width: 55px;
+	height: 21px;
+	border-radius: 5px;
+	outline: none;
+	font-size: 10px;
+	color: orange;
+	background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
