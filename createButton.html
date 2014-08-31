@@ -18,10 +18,12 @@
 <body>
     <div id="global_wrapper" class="global_wrapper">
         <div id="wrapper" class="wrapper">
+
+            <!-- Dialog window to pick a color for background or border -->            
             <div id="dialog" title="Pick Color">
                 <p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
                     <span class="ui-icon ui-icon-pencil" style="float:left; margin:-2px 5px 0 0;"></span>
-                    Simple Colorpicker
+                    Choose color
                 </p>
 
                 <div id="red"></div>
@@ -47,19 +49,24 @@
             <div id="top_section" class="top_section">
                 <div id="top_section_left" class="top_section_left">
                     <div id="top_section_left_body" class="top_section_left_body">
+                        <p>
+                            <label for="buttonValue">Set text:</label>
+                            <input type="text" id="buttonValue" class="battonValue" placeholder="Click me!">
+                             <button id="set_text" class="btn" >set</button>
+                        </p>
 						 <p>
                             <span>Background Color:</span>
-                            <button id="bg_color" class="bg_color change_color_btn" >set</button>
+                            <button id="bg_color" class="bg_color btn" >set</button>
                         </p>
                          <p>
                             <span>Border Color:</span>
-                            <button id="border_color" class="border_color  change_color_btn" >set</button>
+                            <button id="border_color" class="border_color  btn" >set</button>
                         </p>
                         <p>
-                            <label for="amount">Border size:</label>
-                            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                            <label for="amount-border">Border size:</label>
+                            <input type="text" id="amount-border" readonly style="border:0; color:#f6931f; font-weight:bold;">
                         </p>
-                        <div id="slider-range-max"></div>
+                        <div id="slider-range-border"></div>
 
 
 
@@ -68,7 +75,7 @@
                     </div>
                 </div>
                 <div id="top_section_right" class="top_section_right">
-                    <button id="myByDefault"></button>
+                    <button id="myByDefault">Click me!</button>
                 </div>
             </div>
             <div id="bottom_section" class="bottom_section">
@@ -79,7 +86,7 @@
             <div id="footer" class="footer">
                 <input type="text" id="email" class="email" placeholder="email">
                 <br>
-                <button id="submit" class="submit" value="Submit"></button>
+                <button id="submit" class="submit" >Submit</button>
             </div>
         </div>
     </div>

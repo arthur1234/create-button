@@ -35,8 +35,17 @@ div{
 }
 .top_section_left_body{
 	margin: 0 auto;
-	width: 50%;
+	width: 90%;
 	border: 1px solid #abc;
+}
+.top_section_left_body p{
+	margin: 10px;
+}
+
+#slider-range-border{
+	position: relative;
+	left: 145px;
+	top: -29px;
 }
 
 .top_section_right{
@@ -72,7 +81,7 @@ div{
 }
 
 /* button setting color */
-.change_color_btn{
+.btn{
 	width: 70px;
 	height: 20px;
 
