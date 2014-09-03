@@ -1,42 +1,83 @@
 
 
+var setCss = {
+    borderWidth : 1,
+    borderRadius: 2,
+    btnWidth    : 140,
+    btnHeight   : 40,
+    fontSize    : 16,
+    borderColor : "#000",
+    bgColor     : "#abc",
+    btnText     : "Click me!"
+
+};
+
 var changeColor_Flag = 0;    // 1: change background Color
                              // 2: change border Color
                              // 3: change text Color
 
-$(function() {
-    // rgb(255, 140, 60);
 
-    // open dialog window to change color
+
+$(function() {
+    ownButton.showSlider( 
+        "#amount-border", 
+        "#slider-range-border", 
+        "border-width", 
+        0, 
+        10,
+        setCss.borderWidth, 
+        'borderWidth'
+    );
+    ownButton.showSlider(
+        "#amount-width", 
+        "#slider-range-width", 
+        "width", 
+        10, 
+        400,
+        setCss.btnWidth, 
+        'btnWidth'
+    );
+
+    ownButton.showSlider(
+        "#amount-height", 
+        "#slider-range-height", 
+        "height", 
+        10, 
+        400,
+        setCss.btnHeight, 
+        'btnHeight'
+    );
+
+    ownButton.showSlider(
+        "#amount-radius", 
+        "#slider-range-radius", 
+        "border-radius", 
+        0, 
+        40,
+        setCss.borderRadius, 
+        'borderRadius'
+    );
+
+    ownButton.showSlider(
+        "#amount-font-size", 
+        "#slider-range-font-size", 
+        "font-size", 
+        0, 
+        40,
+        setCss.fontSize, 
+        'fontSize'
+    );
+
+
+        // open dialog window to change color
     $("#dialog").dialog({
         autoOpen: false,
         resizable: false
     });
+    
 
 
-    // set default border width
-    $("#slider-range-border").slider({
-        range: "max",
-        min: 0,
-        max: 10,
-        value: 1,
-        slide: function(event, ui) {
-            $("#amount-border").val(ui.value);
-        }
-    });
 
-    // show border width to uesr as a number
-    $("#amount-border").val($("#slider-range-border").slider("value"));
-
-    //  change border width
-    $("#slider-range-border").slider({
-        change: function(event, ui) {
-            var borderWidth = $("#slider-range-border").slider("value") + 'px';
-            $('#top_section_right>button').css({
-                'border-width': borderWidth
-            });
-        }
-    });
 
 
     // open color picker window to set bg-color
@@ -134,5 +175,53 @@ function changeColorByClick(hex) {
         }
 
     }
-    /*alert( hexToRgb("#0033ff").g ); // "51";
+    /* hexToRgb("#0033ff").g ); // "51";
     alert( hexToRgb("#03f").g ); // "51";*/
+
+
+
+
+
+
+
+
+
+
+    var createButton = function() {
+        this.app = 1;
+
+        this.showSlider = function(amountId, sliderId, cssMethod, minVal, maxVal, cssValue, propertyOf_setCss) {
+            // show slider to change a value
+         
+             // set default button width
+            $(sliderId).slider({
+                range: "max",
+                min: minVal,
+                max: maxVal,
+                value: cssValue,
+                slide: function(event, ui) {
+                    $(amountId).val(ui.value);
+
+                }
+            });
+
+            $(amountId).val($(sliderId).slider("value"));
+
+            //  change css values
+            $(sliderId).slider({
+
+                change: function(event, ui) {
+                    setCss[propertyOf_setCss] = $(sliderId).slider("value") + 'px';
+                    $('#top_section_right>button').css(
+                        cssMethod , setCss[propertyOf_setCss]
+                    );
+                }
+            });
+
+           
+        }
+
+    }
+
+ 
+    var ownButton = new createButton();

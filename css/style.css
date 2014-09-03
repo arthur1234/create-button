@@ -48,16 +48,46 @@ div{
 	top: -29px;
 }
 
+#slider-range-width{
+	position: relative;
+	left: 145px;
+	top: -29px;
+	width: 273px;
+}
+
+#slider-range-height{
+	position: relative;
+	left: 145px;
+	top: -29px;
+	width: 200px;
+}
+#slider-range-radius{
+	position: relative;
+	left: 145px;
+	top: -29px;
+	width: 200px;
+}
+
+#slider-range-font-size{
+	position: relative;
+	left: 145px;
+	top: -29px;
+	width: 200px;
+}
+
 .top_section_right{
 	width: 50%;
 	float: left;
 	text-align: center;
 }
+
 .top_section_right button{
-	width: 166px;
+	width: 140px;
 	height: 40px;
-	background-color: green;
-	border: 1px solid blue;
+	background-color: #abc;
+	border: 1px solid #000;
+	border-radius: 2px;
+	font-size: 16px;
 }
 
 .bottom_section{
