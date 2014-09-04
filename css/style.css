@@ -21,12 +21,13 @@ div{
 }
 
 .header h1{
+	padding-top: 20px;
 	font-size: 24px;
 	font-weight: bold;	
 }
 
 .top_section{
-	height: 400px;
+	height: 306px;
 }
 
 .top_section_left{
@@ -35,8 +36,8 @@ div{
 }
 .top_section_left_body{
 	margin: 0 auto;
-	width: 90%;
-	border: 1px solid #abc;
+	width: 100%;
+	border-right: 2px dotted #abc;
 }
 .top_section_left_body p{
 	margin: 10px;
@@ -75,6 +76,10 @@ div{
 	width: 200px;
 }
 
+.slider_blocks{
+	height: 25px;
+}
+
 .top_section_right{
 	width: 50%;
 	float: left;
@@ -82,31 +87,48 @@ div{
 }
 
 .top_section_right button{
+	position: relative;top: 100px;
 	width: 140px;
 	height: 40px;
 	background-color: #abc;
-	border: 1px solid #000;
-	border-radius: 2px;
-	font-size: 16px;
+	border: 2px solid #DE9A27;
+	border-radius: 7px;
+	font-size: 18px;
 }
 
 .bottom_section{
 	margin: 0 auto;
-	width: 612px;
+	width: 1000px;
 	text-align: center;
+	position: relative;
+	top: 10px;;
 }
 
 .bottom_section textarea{
 	width: 300px;
+	height: 150px;
+}
+
+.cssTextArea, .htmlTextArea{
 	float: left;
+	width: 50%;
+	text-align: center;
 }
 
 .footer{
 	margin: 0 auto;
+	width: 800px;
+	position: relative;
+	top: 20px;
+}
+
+.email{
 	width: 200px;
 }
+
 .submit{
-	width: 200px;
+	margin-top: 10px;
+	width: 203px!important;
 	height: 40px;
 }
 
@@ -114,7 +136,10 @@ div{
 .btn{
 	width: 70px;
 	height: 20px;
-
+}
+#border_color{
+	left: 36px;
+	position: relative;
 }
 
 /* //////////   jquery UI  ////////// */
@@ -125,6 +150,7 @@ div{
 .ui-dialog-titlebar .ui-button{
 	top: -1px;
 	left: 83px;
+	background-color: #111C82;
 }
 
 .ui-dialog-titlebar{
