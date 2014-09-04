@@ -84,7 +84,7 @@ $(function() {
     ownButtonWithSlider.cssString();
 
     //show html of button
-    $("#text_html").val("<button id=\"myButton\" class=\"myButton\">Click me!</button>");
+    $("#text_html").val('<button id="myButton" class="myButton">Click me!</button>');
 
     // open dialog window to change color
     $("#dialog").dialog({
@@ -109,9 +109,9 @@ $(function() {
         $("#myByDefault").text($("#buttonValue").val());
         //change html of button
         $("#text_html").val(
-            "<button id=\"myButton\" class=\"myButton\">"+
+            '<button id="myButton" class="myButton">'+
             $("#buttonValue").val()+
-            "</button>"
+            '</button>'
         );
     });
 
@@ -135,6 +135,27 @@ $(function() {
     $("#red").slider("value", 63);
     $("#green").slider("value", 124);
     $("#blue").slider("value", 222); 
+
+
+    // send css and html of button to email
+    $("#submit").click(function(){
+        // php change quots to \" (adding slash)
+        // надо разобраться
+        var btnWithoutQuotes = '<button id=myButton class=myButton>'+$("#buttonValue").val()+'</button>';
+        $.post("http://www.myDomain.net/phpmail/testMailSend.php",
+        {
+          email     : $("#email").val(),
+          cssString : $("#text_css").val(),
+          htmlString: btnWithoutQuotes
+        },
+        function(data,status){
+          alert(data);
+        });
+    });
+
+    
+
+
 });
 
 
@@ -258,7 +279,7 @@ var createButton = function() {
     this.cssString = function () {
         var string = ".myButton {\n";
         for (var i = 0, max = setCss.cssStringArr.length; i < max; i++) {
-            string += "\t" + setCss.cssStringArr[i] + ": "+ setCss[setCss.selfKeys[i]] + "\n";
+            string += "\t" + setCss.cssStringArr[i] + ": "+ setCss[setCss.selfKeys[i]] + ";\n";
         };
         string += "}";
         $('#text_css').val(string);
